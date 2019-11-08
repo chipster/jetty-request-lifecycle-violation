@@ -1,0 +1,26 @@
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'eclipse'
+
+repositories {
+    jcenter()
+}
+
+
+mainClassName = "jettyrequestlifecycleviolation.FileServer"
+
+dependencies {
+
+    compile "org.apache.logging.log4j:log4j-api:+"
+    compile "org.apache.logging.log4j:log4j-core:+"
+    compile "org.apache.logging.log4j:log4j-slf4j-impl:+"
+        	
+    compile "org.eclipse.jetty:jetty-servlet:9.4.22.v20191022"
+    compile "org.eclipse.jetty:jetty-client:9.4.22.v20191022"
+    
+    //compile "org.eclipse.jetty:jetty-servlet:9.4.20.v20190813"
+    //compile "org.eclipse.jetty:jetty-client:9.4.20.v20190813"     
+    
+    compile "commons-lang:commons-lang:2.6"
+}
